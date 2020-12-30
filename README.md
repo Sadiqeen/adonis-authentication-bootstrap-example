@@ -21,7 +21,7 @@ copy .env.example .env
 adonis key:generate
 ```
 
-open .env and chage db config
+open .env and change db config
 
 ### Migrations
 

@@ -44,5 +44,7 @@ adonis serve --dev
 ```
 
 Default administrator account
-email : admin@admin.com
-password : password
+
+> email : admin@admin.com
+
+> password : password

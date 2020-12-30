@@ -5,12 +5,12 @@
 Clone this project to your workscpace
 
 ```bash
-git clone https://github.com/Sadiqeen/adonis-authentication-bootstrap-excample.git
+git clone https://github.com/Sadiqeen/adonis-authentication-bootstrap-example.git
 ```
 Change directory to project and install dependency
 
 ```bash
-cd adonis-authentication-bootstrap-excample
+cd adonis-authentication-bootstrap-example
 npm install
 ```
 

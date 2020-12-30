@@ -1,0 +1,56 @@
+@layout('layouts/app')
+
+@section('content')
+<div class="row justify-content-center align-items-center m-auto">
+    <div class="col-md-6">
+        <div class="card">
+            <img class="card-img-top" height="250" src="http://placeskull.com/300/150" alt="">
+            <div class="card-body">
+                <form action="{{ route('register.attempt') }}" method="POST">
+                    {{ csrfField() }}
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username"
+                            class="form-control {{ hasErrorFor('username') ? 'is-invalid' : '' }}"
+                            value="{{ old('username', '') }}" placeholder="">
+                        @if(hasErrorFor('username'))
+                        <span class="invalid-feedback">
+                            {{ getErrorFor('username') }}
+                        </span>
+                        @endif
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="text" name="email" id="email"
+                            class="form-control {{ hasErrorFor('email') ? 'is-invalid' : '' }}"
+                            value="{{ old('email', '') }}" placeholder="">
+                        @if(hasErrorFor('email'))
+                        <span class="invalid-feedback">
+                            {{ getErrorFor('email') }}
+                        </span>
+                        @endif
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password"
+                            class="form-control {{ hasErrorFor('password') ? 'is-invalid' : '' }}" placeholder="">
+                        @if(hasErrorFor('password'))
+                        <span class="invalid-feedback">
+                            {{ getErrorFor('password') }}
+                        </span>
+                        @endif
+                    </div>
+                    <div class="form-group">
+                        <label for="password_confirmation">Confirm password</label>
+                        <input type="password" name="password_confirmation" id="password_confirmation"
+                            class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
